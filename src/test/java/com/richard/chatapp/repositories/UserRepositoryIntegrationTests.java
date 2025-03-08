@@ -15,7 +15,7 @@ import org.springframework.test.annotation.DirtiesContext.ClassMode;
 @SpringBootTest
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 public class UserRepositoryIntegrationTests {
-  private UserRepository testRepository;
+  private final UserRepository testRepository;
 
   @Autowired
   public UserRepositoryIntegrationTests(UserRepository testRepository) {

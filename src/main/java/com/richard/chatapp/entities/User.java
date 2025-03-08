@@ -1,4 +1,4 @@
-package com.richard.chatapp.user;
+package com.richard.chatapp.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -25,5 +25,6 @@ public class User {
   private String username;
   private String firstName;
   private String lastName;
-  private Status status = Status.ONLINE;
+  @Enumerated(EnumType.STRING)
+  private Status status;
 }

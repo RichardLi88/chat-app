@@ -1,4 +1,4 @@
-package com.richard.chatapp.user;
+package com.richard.chatapp.entities;
 
 public enum Status {
   ONLINE,

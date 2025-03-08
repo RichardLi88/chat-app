@@ -1,8 +1,8 @@
 package com.richard.chatapp.service;
 
 import com.richard.chatapp.repository.UserRepository;
-import com.richard.chatapp.user.Status;
-import com.richard.chatapp.user.User;
+import com.richard.chatapp.entities.Status;
+import com.richard.chatapp.entities.User;
 import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
@@ -26,7 +26,9 @@ public class UserService {
   }
 
   public List<User> findOnlineUsers(){
-    return repository.findAllOnline();
+    return repository.findAllByStatus(Status.ONLINE);
   }
+
+
 }
 

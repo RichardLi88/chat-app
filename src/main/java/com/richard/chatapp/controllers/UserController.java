@@ -2,7 +2,7 @@ package com.richard.chatapp.controllers;
 
 
 import com.richard.chatapp.service.UserService;
-import com.richard.chatapp.user.User;
+import com.richard.chatapp.entities.User;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

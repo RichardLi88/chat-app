@@ -29,6 +29,11 @@ public class UserService {
     return repository.findAllByStatus(Status.ONLINE);
   }
 
+  public User findById(Long id) {
+    Optional<User> user = repository.findById(id);
+    return user.orElse(null);
+  }
+
 
 }
 

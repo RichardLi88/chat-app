@@ -2,12 +2,9 @@ package com.richard.chatapp.service;
 
 import com.richard.chatapp.entities.ChatDirection;
 import com.richard.chatapp.entities.ChatMessage;
-import com.richard.chatapp.entities.ChatRoom;
-import com.richard.chatapp.repository.ChatDirectionRepository;
 import com.richard.chatapp.repository.ChatMessageRepository;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

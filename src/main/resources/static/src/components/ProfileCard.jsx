@@ -18,7 +18,9 @@ function ProfileCard(name) {
             <Avatar radius="xl" color="initials" name={name.name} />
           </Flex>
           <Flex flex="1" justify="center">
-            <Text size="xl">{name.name}</Text>
+            <Text size="xl" className={styles.nowrap}>
+              {name.name}
+            </Text>
           </Flex>
           <Image src={greenDot} alt="Online" />
         </Flex>

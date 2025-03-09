@@ -30,3 +30,7 @@
   border-top-right-radius: 10px;
   background-color: rgb(174, 255, 0);
 }
+
+.nowrap {
+  white-space: nowrap;
+}

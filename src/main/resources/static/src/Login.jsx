@@ -1,7 +1,12 @@
 import { Button, Flex, TextInput } from "@mantine/core";
 import styles from "./css/Login.module.css";
 import { useForm } from "@mantine/form";
+import { replace, useNavigate } from "react-router";
 function Login() {
+  //used to redirect to messaging home page
+  const navigate = useNavigate();
+
+  //using mantine form
   const form = useForm({
     mode: "uncontrolled",
     initialValues: {
@@ -9,6 +14,7 @@ function Login() {
       firstname: "",
       lastname: "",
     },
+
     validate: {
       firstname: (value) =>
         value.length < 2 ? "First name is too short" : null,
@@ -19,6 +25,7 @@ function Login() {
 
   function handleSubmit(values) {
     form.validate();
+    navigate("/chat");
   }
   return (
     <>

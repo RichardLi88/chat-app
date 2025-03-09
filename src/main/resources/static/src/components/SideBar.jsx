@@ -1,6 +1,9 @@
 import { Button, Flex, ScrollArea, Text } from "@mantine/core";
 import styles from "../css/General.module.css";
 import ProfileCard from "./ProfileCard";
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
+import { useNavigate } from "react-router";
 //test names
 const names = [
   "John Doe",
@@ -22,6 +25,15 @@ const names = [
 ];
 
 function SideBar() {
+  //variables to handle logging out
+  const { setUser } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    setUser({});
+    navigate("/", { replace: true });
+  }
+
   return (
     <>
       <Flex
@@ -43,7 +55,7 @@ function SideBar() {
             })}
           </ScrollArea>
         </Flex>
-        <Button m="10px" h="100px">
+        <Button m="10px" h="100px" onClick={handleLogout}>
           Logout
         </Button>
       </Flex>

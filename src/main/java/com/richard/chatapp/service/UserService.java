@@ -12,9 +12,14 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class UserService {
   private final UserRepository repository;
-  public void saveUser(User user) {
+  public void setOnlineUser(User user) {
     user.setStatus(Status.ONLINE);
     repository.save(user);
+  }
+
+  public User saveUser(User user) {
+    user.setStatus(Status.OFFLINE);
+    return repository.save(user);
   }
 
   public void disconnect(User user) {
@@ -34,6 +39,9 @@ public class UserService {
     return user.orElse(null);
   }
 
-
+  public User findByUsername(String username) {
+    Optional<User> user = repository.findByUsername(username);
+    return user.orElse(null);
+  }
 }
 

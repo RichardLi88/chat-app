@@ -1,5 +1,6 @@
 package com.richard.chatapp.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -22,6 +23,7 @@ public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_seq")
   private Long id;
+  @Column(unique = true)
   private String username;
   private String firstName;
   private String lastName;

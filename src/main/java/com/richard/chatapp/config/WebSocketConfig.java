@@ -29,6 +29,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
   public void registerStompEndpoints(StompEndpointRegistry registry) {
     //registers destination where user sends requests to server
     registry.addEndpoint("/ws")
+        .setAllowedOrigins("http://localhost:5173")
         .withSockJS();
   }
 

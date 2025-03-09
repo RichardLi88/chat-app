@@ -1,12 +1,19 @@
 import MessageDisplay from "./components/MessageDisplay";
 import SideBar from "./components/SideBar";
 import styles from "./css/General.module.css";
-import { Flex } from "@mantine/core";
+import { Flex, Title } from "@mantine/core";
 
 function HomeScreen() {
   return (
     <>
-      <Flex w="100vw" h="100vh" justify="center" align="center">
+      <Flex
+        w="100vw"
+        h="100vh"
+        justify="center"
+        align="center"
+        direction="column"
+      >
+        <Title>Welcome to Online Chat!</Title>
         <Flex
           w="80%"
           h="80%"

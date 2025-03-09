@@ -20,6 +20,9 @@ function SideBar() {
         h="100%"
         className={styles["right-shadow"]}
         w="20%"
+        onClick={() => {
+          console.log("clicked");
+        }}
       >
         <Text ta="center" size="xl" fw={700}>
           Online now!

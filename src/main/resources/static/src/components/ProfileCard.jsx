@@ -1,5 +1,6 @@
 import { Avatar, Flex, ScrollArea, Text, Image } from "@mantine/core";
 import greenDot from "../img/green_dot.png";
+import styles from "../css/General.module.css";
 function ProfileCard(name) {
   return (
     <>
@@ -11,6 +12,7 @@ function ProfileCard(name) {
           px="20px"
           py="5px"
           align="center"
+          className={styles.hover}
         >
           <Flex>
             <Avatar radius="xl" color="initials" name={name.name} />

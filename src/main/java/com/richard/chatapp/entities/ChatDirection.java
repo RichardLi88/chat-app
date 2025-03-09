@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class ChatDirection {
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "chatroom_id_seq")
+  @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "direction_id_seq")
   private Long id;
   @ManyToOne
   @JoinColumn(name = "chat_room_id",referencedColumnName = "id")

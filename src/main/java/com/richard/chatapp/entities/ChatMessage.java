@@ -21,7 +21,7 @@ import lombok.Setter;
 @Entity
 public class ChatMessage {
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "chat_message_seq")
   private Long id;
 
   @ManyToOne

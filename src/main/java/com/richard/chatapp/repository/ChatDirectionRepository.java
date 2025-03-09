@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ChatDirectionRepository extends JpaRepository<ChatDirection,Long> {
 
-  @Query("SELECT c FROM ChatDirection WHERE c.sender.id = :senderId AND c.recipient.id = :recipientId")
+  @Query("SELECT c FROM ChatDirection c WHERE c.sender.id = :senderId AND c.recipient.id = :recipientId")
   Optional<ChatDirection> findChatDirection(@Param("senderId") Long senderId,@Param("recipientId") Long recipientId);
 }

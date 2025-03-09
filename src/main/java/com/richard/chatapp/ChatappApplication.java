@@ -11,7 +11,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 @SpringBootApplication
 public class ChatappApplication implements CommandLineRunner {
 	private final DataSource dataSource;
-
   public ChatappApplication(DataSource dataSource) {
     this.dataSource = dataSource;
   }

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 public interface ChatMessageRepository extends JpaRepository<ChatMessage,Long> {
   @Query("SELECT cm FROM ChatMessage cm " +
       "JOIN cm.chatDirection cd " +
-      "JOIN cd.chatRoomId cr" +
+      "JOIN cd.chatRoom cr " +
       "WHERE cr.id = :chatId")
   List<ChatMessage> findByChatId(@Param("chatId") Long id);
 }
